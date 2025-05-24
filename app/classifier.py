@@ -18,6 +18,7 @@ from utils.pdf_text import extract_text_from_pdf
 # OpenAI initialization
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 print("🔐 OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
+
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 UPLOAD_DIR = BASE_DIR / "uploads"
@@ -32,6 +33,7 @@ MAX_CHARS = 12000
 
 # === SQLite Setup ===
 def initialize_sqlite():
+    SQLITE_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(SQLITE_PATH)
     cursor = conn.cursor()
     cursor.execute("""
@@ -53,13 +55,20 @@ def initialize_sqlite():
 def insert_embedding_to_sqlite(filename, label, embedding, is_training, top_neighbors=None, top_similarities=None):
     conn = sqlite3.connect(SQLITE_PATH)
     cursor = conn.cursor()
-    cursor.execute(
-        """
+    cursor.execute("""
+        SELECT id FROM embeddings WHERE filename = ? AND is_training = ?
+    """, (filename, int(is_training)))
+    row = cursor.fetchone()
+
+    if row:
+        # Do not insert duplicate
+        conn.close()
+        return
+
+    cursor.execute("""
         INSERT INTO embeddings (filename, label, embedding, is_training, top_neighbors, top_similarities)
         VALUES (?, ?, ?, ?, ?, ?)
-        """,
-        (filename, label, json.dumps(embedding), int(is_training), top_neighbors, top_similarities)
-    )
+    """, (filename, label, json.dumps(embedding), int(is_training), top_neighbors, top_similarities))
     conn.commit()
     conn.close()
 
@@ -71,76 +80,11 @@ def update_pca_coordinates(pca_results, ids):
     conn.commit()
     conn.close()
 
-# === Embedding Utilities ===
-def chunk_text(text, max_chars=MAX_CHARS):
-    return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
-
-def get_avg_embedding_from_chunks(text):
-    chunks = chunk_text(text)
-    response = client.embeddings.create(
-        input=chunks,
-        model="text-embedding-3-large"
-    )
-    embeddings = [np.array(r.embedding) for r in response.data]
-    avg_vector = np.mean(embeddings, axis=0)
-    return avg_vector.tolist()
-
-def embed_and_cache(filepath, label=None):
-    filename = filepath.name
-    conn = sqlite3.connect(SQLITE_PATH)
-    cursor = conn.cursor()
-    cursor.execute("SELECT embedding, label FROM embeddings WHERE filename = ?", (filename,))
-    row = cursor.fetchone()
-    conn.close()
-
-    if row:
-        embedding = json.loads(row[0])
-        existing_label = row[1]
-        return embedding, existing_label or label or "unknown"
-
-    safe_name = filepath.stem.replace(" ", "_").replace("/", "_")
-    embed_file = EMBED_DIR / f"{safe_name}.json"
-    if embed_file.exists():
-        with open(embed_file, "r") as f:
-            obj = json.load(f)
-            return obj["embedding"], obj.get("label", "unknown")
-
-    text = extract_text_from_pdf(filepath)
-    embedding = get_avg_embedding_from_chunks(text)
-    with open(embed_file, "w") as f:
-        json.dump({"embedding": embedding, "label": label or "unknown"}, f, indent=2)
-
-    return embedding, label or "unknown"
-
-# === KNN Training ===
-def train_knn_model():
-    X, y, filenames = [], [], []
-    initialize_sqlite()
-
-    for folder in (UPLOAD_DIR / "train").glob("*"):
-        label = folder.name
-        for file in folder.glob("*.pdf"):
-            embedding, _ = embed_and_cache(file, label)
-            insert_embedding_to_sqlite(file.name, label, embedding, True, None, None)
-            X.append(embedding)
-            y.append(label)
-            filenames.append(file.name)
-
-    model = KNeighborsClassifier(n_neighbors=3)
-    model.fit(X, y)
-    model._fit_X_filenames = filenames
-
-    with open(MODEL_PATH, "wb") as f:
-        pickle.dump(model, f)
-
-    return model
-
-# === Classification and Post-Processing ===
 def classify_test_documents(model):
     X_test, filenames, embeddings = [], [], []
 
     for file in (UPLOAD_DIR / "test").glob("*.pdf"):
-        embedding, _ = embed_and_cache(file)
+        embedding, label, already_cached = embed_and_cache(file, is_training=False)
         X_test.append(embedding)
         embeddings.append(embedding)
         filenames.append(file.name)
@@ -158,8 +102,8 @@ def classify_test_documents(model):
             neighbor_info = "; ".join(top_neighbor_filenames)
             similarity_info = "; ".join(top_similarities)
 
-            w.writerow([filenames[i], predicted_labels[i], neighbor_info, similarity_info])
             insert_embedding_to_sqlite(filenames[i], predicted_labels[i], embedding, False, neighbor_info, similarity_info)
+            w.writerow([filenames[i], predicted_labels[i], neighbor_info, similarity_info])
 
     for i, file in enumerate((UPLOAD_DIR / "test").glob("*.pdf")):
         predicted_label = str(predicted_labels[i])
@@ -174,6 +118,68 @@ def classify_test_documents(model):
         for i, row in enumerate(similarity_matrix):
             w.writerow([filenames[i]] + [f"{sim:.4f}" for sim in row])
 
+    return list(zip(filenames, predicted_labels)), predicted_labels
+
+
+# === Embedding Utilities ===
+def chunk_text(text, max_chars=MAX_CHARS):
+    return [text[i:i + max_chars] for i in range(0, len(text), max_chars)]
+
+def get_avg_embedding_from_chunks(text):
+    chunks = chunk_text(text)
+    response = client.embeddings.create(
+        input=chunks,
+        model="text-embedding-3-large"
+    )
+    embeddings = [np.array(r.embedding) for r in response.data]
+    avg_vector = np.mean(embeddings, axis=0)
+    return avg_vector.tolist()
+
+def embed_and_cache(filepath, label=None, is_training=False):
+    filename = filepath.name
+    conn = sqlite3.connect(SQLITE_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT embedding, label FROM embeddings WHERE filename = ? AND is_training = ?", (filename, int(is_training)))
+    row = cursor.fetchone()
+    conn.close()
+
+    if row:
+        embedding = json.loads(row[0])
+        existing_label = row[1]
+        return embedding, existing_label or label or "unknown", True
+
+    # Extract and compute embedding
+    text = extract_text_from_pdf(filepath)
+    embedding = get_avg_embedding_from_chunks(text)
+
+    return embedding, label or "unknown", False
+
+# === KNN Training ===
+def train_knn_model():
+    X, y, filenames = [], [], []
+    initialize_sqlite()
+
+    for folder in (UPLOAD_DIR / "train").glob("*"):
+        label = folder.name
+        for file in folder.glob("*.pdf"):
+            embedding, _, already_in_db = embed_and_cache(file, label, is_training=True)
+            if not already_in_db:
+                insert_embedding_to_sqlite(file.name, label, embedding, True)
+            X.append(embedding)
+            y.append(label)
+            filenames.append(file.name)
+
+    model = KNeighborsClassifier(n_neighbors=3)
+    model.fit(X, y)
+    model._fit_X_filenames = filenames
+
+    with open(MODEL_PATH, "wb") as f:
+        pickle.dump(model, f)
+
+    return model
+
+# === PCA (optional) ===
+def perform_pca():
     conn = sqlite3.connect(SQLITE_PATH)
     df = pd.read_sql_query("SELECT id, embedding FROM embeddings", conn)
     conn.close()
@@ -192,5 +198,3 @@ def classify_test_documents(model):
         pca = PCA(n_components=2)
         reduced = pca.fit_transform(np.array(vectors))
         update_pca_coordinates(reduced, ids)
-
-    return list(zip(filenames, predicted_labels)), predicted_labels

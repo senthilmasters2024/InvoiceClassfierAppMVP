@@ -1,3 +1,4 @@
+import io
 import os
 import sys
 import base64
@@ -6,6 +7,7 @@ import streamlit as st
 import plotly.express as px
 from pathlib import Path
 import streamlit.components.v1 as components
+import zipfile
 
 # 👇 Set paths
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -19,10 +21,23 @@ RESULT_CSV = BASE_DIR / "results" / "predictions.csv"
 INVOICE_DIR = BASE_DIR / "uploads" / "test"
 PLOT_2D_HTML = BASE_DIR / "results" / "2D_Predicted_vs_Train_Similarity.html"
 PLOT_3D_HTML = BASE_DIR / "results" / "3D_Predicted_vs_Train_Similarity.html"
+CLASSIFIED_DIR = BASE_DIR / "classified"
 
 st.set_page_config(page_title="Unified Invoice App", layout="wide")
 
 tab1, tab2 = st.tabs(["📥 Upload & Classify", "📊 Dashboard"])
+
+# === Function to Create ZIP of All Classified PDFs ===
+def create_classified_zip():
+    zip_buffer = io.BytesIO()
+    with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
+        for label_folder in CLASSIFIED_DIR.glob("*"):
+            if label_folder.is_dir():
+                for pdf in label_folder.glob("*.pdf"):
+                    arcname = f"{label_folder.name}/{pdf.name}"
+                    zipf.write(pdf, arcname)
+    zip_buffer.seek(0)
+    return zip_buffer
 
 # ================== Tab 1: Upload & Classify ==================
 with tab1:
@@ -49,6 +64,7 @@ with tab1:
         with st.spinner("Generating embeddings and training model..."):
             model = classifier.train_knn_model()
             results, predicted_labels = classifier.classify_test_documents(model)
+            classifier.perform_pca()
         st.success("✅ Classification complete!")
         st.write("**Results:**")
         for fname, label in results:
@@ -90,15 +106,31 @@ with tab2:
             st.sidebar.markdown(f"**Similarities:** `{invoice_row['TopSimilarities']}`")
 
         invoice_path = INVOICE_DIR / f"{selected_invoice}.pdf"
-        if invoice_path.exists():
-            st.subheader("📄 Download Selected Invoice")
-            with open(invoice_path, "rb") as f:
-                st.download_button(label="⬇️ Download Invoice PDF",
-                                   data=f,
-                                   file_name=f"{selected_invoice}.pdf",
-                                   mime="application/pdf")
 
-        # Neighbor
+        st.subheader("📄 Download Options")
+        col1, col2 = st.columns(2)
+
+        with col1:
+            if invoice_path.exists():
+                with open(invoice_path, "rb") as f:
+                    st.download_button(label="⬇️ Download Selected Invoice PDF",
+                                       data=f,
+                                       file_name=f"{selected_invoice}.pdf",
+                                       mime="application/pdf")
+
+        with col2:
+            if CLASSIFIED_DIR.exists():
+                zip_buffer = create_classified_zip()
+                st.download_button(
+                    label="📦 Download All Classified PDFs (ZIP)",
+                    data=zip_buffer,
+                    file_name="classified_results.zip",
+                    mime="application/zip"
+                )
+            else:
+                st.warning("No classified PDFs found.")
+
+        # Neighbor PDF
         if 'TopNeighbors' in invoice_row and isinstance(invoice_row['TopNeighbors'], str):
             top_neighbor = invoice_row['TopNeighbors'].split(';')[0].strip()
             neighbor_path = INVOICE_DIR / top_neighbor
@@ -137,5 +169,6 @@ with tab2:
                          labels={'x': 'Label', 'y': 'Document Count'}, title="Documents per Category")
     st.plotly_chart(fig_summary, use_container_width=True)
 
-    st.subheader("📥 Export Results")
-    st.download_button("Download Full Predictions CSV", df.to_csv(index=False), file_name="classified_invoices.csv", mime="text/csv")
+    # CSV Export remains here
+    st.subheader("📥 Export Predictions as CSV")
+    st.download_button("📄 Download Full Predictions CSV", df.to_csv(index=False), file_name="classified_invoices.csv", mime="text/csv")
