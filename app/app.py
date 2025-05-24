@@ -42,7 +42,7 @@ def create_classified_zip():
 # ================== Tab 1: Upload & Classify ==================
 with tab1:
     st.header("📚 Upload Training Data")
-    label = st.selectbox("Select Label/Category", ["healthcare", "finance", "water", "energy", "other"])
+    label = st.selectbox("Select Label/Category", ["healthcare", "capitalincome", "craftsman", "energy", "other"])
     train_files = st.file_uploader("Upload .pdf or .txt files for training", type=["pdf", "txt"], accept_multiple_files=True, key="train_upload")
 
     if train_files:
