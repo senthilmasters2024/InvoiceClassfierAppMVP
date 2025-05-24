@@ -91,18 +91,24 @@ with tab2:
 
         invoice_path = INVOICE_DIR / f"{selected_invoice}.pdf"
         if invoice_path.exists():
-            st.subheader("📄 Selected Invoice Preview")
-            base64_pdf = base64.b64encode(invoice_path.read_bytes()).decode('utf-8')
-            st.components.v1.html(f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="500"></iframe>', height=520)
+            st.subheader("📄 Download Selected Invoice")
+            with open(invoice_path, "rb") as f:
+                st.download_button(label="⬇️ Download Invoice PDF",
+                                   data=f,
+                                   file_name=f"{selected_invoice}.pdf",
+                                   mime="application/pdf")
 
         # Neighbor
         if 'TopNeighbors' in invoice_row and isinstance(invoice_row['TopNeighbors'], str):
             top_neighbor = invoice_row['TopNeighbors'].split(';')[0].strip()
             neighbor_path = INVOICE_DIR / top_neighbor
             if neighbor_path.exists():
-                st.subheader("📎 Top Neighbor Invoice Preview")
-                base64_neighbor = base64.b64encode(neighbor_path.read_bytes()).decode('utf-8')
-                st.components.v1.html(f'<iframe src="data:application/pdf;base64,{base64_neighbor}" width="100%" height="500"></iframe>', height=520)
+                st.subheader("📎 Download Top Neighbor Invoice")
+                with open(neighbor_path, "rb") as f:
+                    st.download_button(label="⬇️ Download Top Neighbor PDF",
+                                       data=f,
+                                       file_name=neighbor_path.name,
+                                       mime="application/pdf")
 
     # Visualization
     subtab1, subtab2 = st.tabs(["2D Plot", "3D Plot"])

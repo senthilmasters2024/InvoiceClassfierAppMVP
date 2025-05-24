@@ -17,7 +17,7 @@ from utils.pdf_text import extract_text_from_pdf
 
 # OpenAI initialization
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+print("🔐 OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 UPLOAD_DIR = BASE_DIR / "uploads"

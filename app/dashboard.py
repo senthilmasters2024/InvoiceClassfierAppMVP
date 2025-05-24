@@ -50,9 +50,8 @@ if 'TopNeighbors' in invoice_row and isinstance(invoice_row['TopNeighbors'], str
 
 if invoice_path.exists():
     st.subheader("📄 Selected Invoice Preview")
-    import base64
-    base64_pdf = base64.b64encode(invoice_path.read_bytes()).decode('utf-8')
-    st.components.v1.html(f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="500"></iframe>', height=520)
+    st.markdown(f'<embed src="{invoice_path.as_uri()}" width="100%" height="600px" type="application/pdf">',
+                unsafe_allow_html=True)
     with open(invoice_path, "rb") as pdf_file:
         st.sidebar.download_button(
             label="📥 Download PDF",
