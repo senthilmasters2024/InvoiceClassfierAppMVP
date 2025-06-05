@@ -1,3 +1,11 @@
+# Core Azure SDKs
+azure-search-documents>=11.6.0b12
+azure-core>=1.29.5
+
+# OpenAI or Azure OpenAI
+openai>=1.3.7  # works for both OpenAI & Azure OpenAI
+
+# Other dependencies from your project (adjust as needed)
 streamlit
 pandas
 plotly

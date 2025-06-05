@@ -1,0 +1,181 @@
+Filename,Rank,PredictedLabel,MatchTitle,SimilarityScore
+Capital Income part2_1-1.pdf,1,capitalincome,Capital Income part1_8-8.pdf,0.91016906
+Capital Income part2_1-1.pdf,2,capitalincome,Capital Income part1_4-5.pdf,0.83533686
+Capital Income part2_1-1.pdf,3,capitalincome,Capital Income part1_7-7.pdf,0.8348057
+Capital Income part2_10-11.pdf,1,capitalincome,Capital Income part1_4-5.pdf,0.9199499
+Capital Income part2_10-11.pdf,2,capitalincome,Capital Income part1_4-5.pdf,0.88291407
+Capital Income part2_10-11.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.83931655
+Capital Income part2_12-12.pdf,1,capitalincome,Capital Income part1_3-3.pdf,0.8552684
+Capital Income part2_12-12.pdf,2,capitalincome,Capital Income part1_11-11.pdf,0.8335573
+Capital Income part2_12-12.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.8116262
+Capital Income part2_13-13.pdf,1,capitalincome,Capital Income part1_3-3.pdf,0.7827131
+Capital Income part2_13-13.pdf,2,capitalincome,Capital Income part1_11-11.pdf,0.7779097
+Capital Income part2_13-13.pdf,3,capitalincome,Capital Income part1_6-6.pdf,0.74742156
+Capital Income part2_14-15.pdf,1,capitalincome,Capital Income part1_4-5.pdf,0.8124632
+Capital Income part2_14-15.pdf,2,capitalincome,Capital Income part1_14-14.pdf,0.8060114
+Capital Income part2_14-15.pdf,3,capitalincome,Capital Income part1_9-10.pdf,0.7997939
+Capital Income part2_16-16.pdf,1,capitalincome,Capital Income part1_7-7.pdf,0.8453534
+Capital Income part2_16-16.pdf,2,capitalincome,Capital Income part1_11-11.pdf,0.8442909
+Capital Income part2_16-16.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.8436973
+Capital Income part2_17-17.pdf,1,capitalincome,Capital Income part1_6-6.pdf,0.79525656
+Capital Income part2_17-17.pdf,2,capitalincome,Capital Income part1_9-10.pdf,0.792997
+Capital Income part2_17-17.pdf,3,capitalincome,Capital Income part1_1-2.pdf,0.78829753
+Capital Income part2_18-18.pdf,1,capitalincome,Capital Income part1_6-6.pdf,0.8433596
+Capital Income part2_18-18.pdf,2,capitalincome,Capital Income part1_4-5.pdf,0.8209745
+Capital Income part2_18-18.pdf,3,capitalincome,Capital Income part1_1-2.pdf,0.80491596
+Capital Income part2_19-19.pdf,1,capitalincome,Capital Income part1_12-13.pdf,0.78610706
+Capital Income part2_19-19.pdf,2,capitalincome,Capital Income part1_8-8.pdf,0.7811001
+Capital Income part2_19-19.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.780781
+Capital Income part2_2-2.pdf,1,capitalincome,Capital Income part1_11-11.pdf,0.9364815
+Capital Income part2_2-2.pdf,2,capitalincome,Capital Income part1_3-3.pdf,0.9326122
+Capital Income part2_2-2.pdf,3,capitalincome,Capital Income part1_7-7.pdf,0.8710262
+Capital Income part2_20-20.pdf,1,capitalincome,Capital Income part1_11-11.pdf,0.872976
+Capital Income part2_20-20.pdf,2,capitalincome,Capital Income part1_7-7.pdf,0.8517808
+Capital Income part2_20-20.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.85124356
+Capital Income part2_21-23.pdf,1,capitalincome,Capital Income part1_4-5.pdf,0.8027381
+Capital Income part2_21-23.pdf,2,capitalincome,Capital Income part1_9-10.pdf,0.7807206
+Capital Income part2_21-23.pdf,3,capitalincome,Capital Income part1_9-10.pdf,0.7793329
+Capital Income part2_24-24.pdf,1,capitalincome,Capital Income part1_16-end.pdf,0.858288
+Capital Income part2_24-24.pdf,2,capitalincome,Capital Income part1_7-7.pdf,0.84673935
+Capital Income part2_24-24.pdf,3,capitalincome,Capital Income part1_11-11.pdf,0.8381808
+Capital Income part2_25-26.pdf,1,capitalincome,Capital Income part1_7-7.pdf,0.8630076
+Capital Income part2_25-26.pdf,2,capitalincome,Capital Income part1_11-11.pdf,0.86098564
+Capital Income part2_25-26.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.8572141
+Capital Income part2_27-28.pdf,1,capitalincome,Capital Income part1_4-5.pdf,0.85474336
+Capital Income part2_27-28.pdf,2,capitalincome,Capital Income part1_14-14.pdf,0.8540459
+Capital Income part2_27-28.pdf,3,capitalincome,Capital Income part1_3-3.pdf,0.8419716
+Capital Income part2_29-end.pdf,1,capitalincome,Capital Income part1_1-2.pdf,0.82741237
+Capital Income part2_29-end.pdf,2,capitalincome,Capital Income part1_6-6.pdf,0.8123124
+Capital Income part2_29-end.pdf,3,capitalincome,Capital Income part1_4-5.pdf,0.80481255
+Capital Income part2_3-4.pdf,1,capitalincome,Capital Income part1_4-5.pdf,0.91691864
+Capital Income part2_3-4.pdf,2,capitalincome,Capital Income part1_4-5.pdf,0.87771577
+Capital Income part2_3-4.pdf,3,capitalincome,Capital Income part1_14-14.pdf,0.8396827
+Capital Income part2_5-5.pdf,1,capitalincome,Capital Income part1_9-10.pdf,0.9329759
+Capital Income part2_5-5.pdf,2,capitalincome,Capital Income part1_14-14.pdf,0.92940843
+Capital Income part2_5-5.pdf,3,capitalincome,Capital Income part1_9-10.pdf,0.8732357
+Capital Income part2_6-6.pdf,1,capitalincome,Capital Income part1_3-3.pdf,0.7651326
+Capital Income part2_6-6.pdf,2,capitalincome,Capital Income part1_7-7.pdf,0.7629792
+Capital Income part2_6-6.pdf,3,capitalincome,Capital Income part1_12-13.pdf,0.7616399
+Capital Income part2_7-7.pdf,1,capitalincome,Capital Income part1_14-14.pdf,0.79945236
+Capital Income part2_7-7.pdf,2,capitalincome,Capital Income part1_12-13.pdf,0.79666835
+Capital Income part2_7-7.pdf,3,capitalincome,Capital Income part1_12-13.pdf,0.7860312
+Capital Income part2_8-9.pdf,1,capitalincome,Capital Income part1_9-10.pdf,0.80364275
+Capital Income part2_8-9.pdf,2,capitalincome,Capital Income part1_14-14.pdf,0.79405224
+Capital Income part2_8-9.pdf,3,capitalincome,Capital Income part1_12-13.pdf,0.7918645
+Craftsmen part2_1-1.pdf,1,craftsman,Craftsmen part2.pdf,0.9559109
+Craftsmen part2_1-1.pdf,2,craftsman,Craftsmen part2.pdf,0.87469834
+Craftsmen part2_1-1.pdf,3,craftsman,Craftsmen part2.pdf,0.8663311
+Craftsmen part2_11-11.pdf,1,craftsman,Craftsmen part2.pdf,0.94393885
+Craftsmen part2_11-11.pdf,2,craftsman,Craftsmen part2.pdf,0.8608776
+Craftsmen part2_11-11.pdf,3,craftsman,Craftsmen part2.pdf,0.8555101
+Craftsmen part2_12-12.pdf,1,craftsman,Craftsmen part2.pdf,0.89671624
+Craftsmen part2_12-12.pdf,2,craftsman,Craftsmen part 1_1-1.pdf,0.8211295
+Craftsmen part2_12-12.pdf,3,craftsman,Craftsmen part2.pdf,0.80497336
+Craftsmen part2_13-13.pdf,1,craftsman,Craftsmen part2.pdf,0.90861934
+Craftsmen part2_13-13.pdf,2,craftsman,Craftsmen part2.pdf,0.8116907
+Craftsmen part2_13-13.pdf,3,craftsman,Craftsmen part2.pdf,0.81071126
+Craftsmen part2_14-15.pdf,1,craftsman,Craftsmen part2.pdf,0.8953381
+Craftsmen part2_14-15.pdf,2,craftsman,Craftsmen part2.pdf,0.8445587
+Craftsmen part2_14-15.pdf,3,craftsman,Craftsmen part2.pdf,0.7892068
+Craftsmen part2_16-16.pdf,1,craftsman,Craftsmen part2.pdf,0.84505486
+Craftsmen part2_16-16.pdf,2,craftsman,Craftsmen part2.pdf,0.8139276
+Craftsmen part2_16-16.pdf,3,craftsman,Craftsmen part2.pdf,0.780232
+Craftsmen part2_17-17.pdf,1,craftsman,Craftsmen part2.pdf,0.8991827
+Craftsmen part2_17-17.pdf,2,craftsman,Craftsmen part2.pdf,0.8538835
+Craftsmen part2_17-17.pdf,3,craftsman,Craftsmen part 1_3-3.pdf,0.83785117
+Craftsmen part2_18-18.pdf,1,craftsman,Craftsmen part2.pdf,0.908239
+Craftsmen part2_18-18.pdf,2,craftsman,Craftsmen part2.pdf,0.81357867
+Craftsmen part2_18-18.pdf,3,craftsman,Craftsmen part2.pdf,0.8001157
+Craftsmen part2_19-19.pdf,1,craftsman,Craftsmen part2.pdf,0.8827339
+Craftsmen part2_19-19.pdf,2,craftsman,Craftsmen part2.pdf,0.8317837
+Craftsmen part2_19-19.pdf,3,craftsman,Craftsmen part 1_10-10.pdf,0.8054942
+Craftsmen part2_2-2.pdf,1,craftsman,Craftsmen part2.pdf,0.9672925
+Craftsmen part2_2-2.pdf,2,craftsman,Craftsmen part2.pdf,0.8929262
+Craftsmen part2_2-2.pdf,3,craftsman,Craftsmen part2.pdf,0.86560184
+Craftsmen part2_20-20.pdf,1,craftsman,Craftsmen part2.pdf,0.9219177
+Craftsmen part2_20-20.pdf,2,craftsman,Craftsmen part2.pdf,0.8666638
+Craftsmen part2_20-20.pdf,3,craftsman,Craftsmen part 1_10-10.pdf,0.8210366
+Craftsmen part2_21-21.pdf,1,craftsman,Craftsmen part2.pdf,0.8248015
+Craftsmen part2_21-21.pdf,2,craftsman,Craftsmen part2.pdf,0.82407606
+Craftsmen part2_21-21.pdf,3,craftsman,Craftsmen part2.pdf,0.7898699
+Craftsmen part2_22-23.pdf,1,craftsman,Craftsmen part2.pdf,0.90332806
+Craftsmen part2_22-23.pdf,2,craftsman,Craftsmen part2.pdf,0.87503785
+Craftsmen part2_22-23.pdf,3,craftsman,Craftsmen part 1.pdf,0.84867644
+Craftsmen part2_24-end.pdf,1,craftsman,Craftsmen part2.pdf,0.9397121
+Craftsmen part2_24-end.pdf,2,craftsman,Craftsmen part2.pdf,0.84774894
+Craftsmen part2_24-end.pdf,3,craftsman,Craftsmen part2.pdf,0.80349344
+Craftsmen part2_3-3.pdf,1,craftsman,Craftsmen part2.pdf,0.80551875
+Craftsmen part2_3-3.pdf,2,craftsman,Craftsmen part2.pdf,0.7961738
+Craftsmen part2_3-3.pdf,3,craftsman,Craftsmen part2.pdf,0.7874251
+Craftsmen part2_4-4.pdf,1,craftsman,Craftsmen part2.pdf,0.88283414
+Craftsmen part2_4-4.pdf,2,craftsman,Craftsmen part2.pdf,0.86945266
+Craftsmen part2_4-4.pdf,3,craftsman,Craftsmen part2.pdf,0.7944581
+Craftsmen part2_5-5.pdf,1,craftsman,Craftsmen part2.pdf,0.8876586
+Craftsmen part2_5-5.pdf,2,craftsman,Craftsmen part2.pdf,0.87751335
+Craftsmen part2_5-5.pdf,3,craftsman,Craftsmen part2.pdf,0.8347011
+Craftsmen part2_6-6.pdf,1,craftsman,Craftsmen part2.pdf,0.9058119
+Craftsmen part2_6-6.pdf,2,craftsman,Craftsmen part2.pdf,0.8718221
+Craftsmen part2_6-6.pdf,3,craftsman,Craftsmen part2.pdf,0.8608094
+Craftsmen part2_7-7.pdf,1,craftsman,Craftsmen part2.pdf,0.8898442
+Craftsmen part2_7-7.pdf,2,craftsman,Craftsmen part 1.pdf,0.82985103
+Craftsmen part2_7-7.pdf,3,craftsman,Craftsmen part 1_8-9.pdf,0.81700695
+Craftsmen part2_8-10.pdf,1,craftsman,Craftsmen part2.pdf,0.9225958
+Craftsmen part2_8-10.pdf,2,craftsman,Craftsmen part2.pdf,0.866183
+Craftsmen part2_8-10.pdf,3,craftsman,Craftsmen part2.pdf,0.84951484
+Healthcare part2_1-1.pdf,1,capitalincome,Healthcare part2_1-1.pdf,0.965953
+Healthcare part2_1-1.pdf,2,capitalincome,Healthcare part2_1-1.pdf,0.78274643
+Healthcare part2_1-1.pdf,3,healthcare,Healthcare part1_7-8.pdf,0.76045763
+Healthcare part2_10-10.pdf,1,healthcare,Healthcare part1_4-4.pdf,0.77822405
+Healthcare part2_10-10.pdf,2,healthcare,Healthcare part1_5-5.pdf,0.76742715
+Healthcare part2_10-10.pdf,3,capitalincome,Healthcare part2_1-1.pdf,0.765267
+Healthcare part2_11-11.pdf,1,healthcare,Healthcare part1_6-6.pdf,0.78411555
+Healthcare part2_11-11.pdf,2,healthcare,Healthcare part1_3-3.pdf,0.7620773
+Healthcare part2_11-11.pdf,3,healthcare,Healthcare part1_4-4.pdf,0.75458556
+Healthcare part2_12-12.pdf,1,healthcare,Healthcare part1_9-9.pdf,0.7687077
+Healthcare part2_12-12.pdf,2,healthcare,Healthcare part1_2-2.pdf,0.7477643
+Healthcare part2_12-12.pdf,3,healthcare,Healthcare part1_1-1.pdf,0.74462706
+Healthcare part2_13-14.pdf,1,healthcare,Healthcare part1_1-1.pdf,0.82874095
+Healthcare part2_13-14.pdf,2,healthcare,Healthcare part1_9-9.pdf,0.7984649
+Healthcare part2_13-14.pdf,3,healthcare,Healthcare part1_2-2.pdf,0.777865
+Healthcare part2_15-15.pdf,1,healthcare,Healthcare part1_5-5.pdf,0.84670174
+Healthcare part2_15-15.pdf,2,healthcare,Healthcare part1_6-6.pdf,0.7994614
+Healthcare part2_15-15.pdf,3,healthcare,Healthcare part1_4-4.pdf,0.7807663
+Healthcare part2_16-16.pdf,1,healthcare,Healthcare part1_2-2.pdf,0.82238257
+Healthcare part2_16-16.pdf,2,healthcare,Healthcare part1_9-9.pdf,0.799572
+Healthcare part2_16-16.pdf,3,healthcare,Healthcare part1_1-1.pdf,0.79438025
+Healthcare part2_17-17.pdf,1,healthcare,Healthcare part1_11-end.pdf,0.79081213
+Healthcare part2_17-17.pdf,2,healthcare,Healthcare part1_10-10.pdf,0.790666
+Healthcare part2_17-17.pdf,3,craftsman,Craftsmen part2.pdf,0.76777226
+Healthcare part2_18-18.pdf,1,healthcare,Healthcare part1_9-9.pdf,0.7624421
+Healthcare part2_18-18.pdf,2,healthcare,Healthcare part1_4-4.pdf,0.7455743
+Healthcare part2_18-18.pdf,3,craftsman,Craftsmen part2.pdf,0.744545
+Healthcare part2_19-20.pdf,1,healthcare,Healthcare part1_9-9.pdf,0.8613926
+Healthcare part2_19-20.pdf,2,healthcare,Healthcare part1_9-9.pdf,0.8216326
+Healthcare part2_19-20.pdf,3,healthcare,Healthcare part1_2-2.pdf,0.79316604
+Healthcare part2_2-2.pdf,1,healthcare,Healthcare part1_2-2.pdf,0.8899464
+Healthcare part2_2-2.pdf,2,healthcare,Healthcare part1_9-9.pdf,0.8184286
+Healthcare part2_2-2.pdf,3,healthcare,Healthcare part1_1-1.pdf,0.7956472
+Healthcare part2_21-21.pdf,1,healthcare,Healthcare part1_5-5.pdf,0.8068154
+Healthcare part2_21-21.pdf,2,healthcare,Healthcare part1_6-6.pdf,0.78968567
+Healthcare part2_21-21.pdf,3,healthcare,Healthcare part1_4-4.pdf,0.7856304
+Healthcare part2_22-22.pdf,1,healthcare,Healthcare part1_9-9.pdf,0.7897392
+Healthcare part2_22-22.pdf,2,healthcare,Healthcare part1_1-1.pdf,0.7812301
+Healthcare part2_22-22.pdf,3,healthcare,Healthcare part1_2-2.pdf,0.7746252
+Healthcare part2_23-end.pdf,1,healthcare,Healthcare part1_4-4.pdf,0.82265073
+Healthcare part2_23-end.pdf,2,healthcare,Healthcare part1_11-end.pdf,0.76104945
+Healthcare part2_23-end.pdf,3,healthcare,Healthcare part1_6-6.pdf,0.7398471
+Healthcare part2_3-4.pdf,1,healthcare,Healthcare part1_7-8.pdf,0.7664833
+Healthcare part2_3-4.pdf,2,healthcare,Healthcare part1_6-6.pdf,0.7658215
+Healthcare part2_3-4.pdf,3,healthcare,Healthcare part1_7-8.pdf,0.76042145
+Healthcare part2_5-6.pdf,1,healthcare,Healthcare part1_7-8.pdf,0.7768704
+Healthcare part2_5-6.pdf,2,craftsman,Craftsmen part2.pdf,0.7689667
+Healthcare part2_5-6.pdf,3,healthcare,Healthcare part1_3-3.pdf,0.76855534
+Healthcare part2_7-7.pdf,1,craftsman,Craftsmen part2.pdf,0.7894904
+Healthcare part2_7-7.pdf,2,craftsman,Craftsmen part2.pdf,0.78337204
+Healthcare part2_7-7.pdf,3,craftsman,Craftsmen part2.pdf,0.7827487
+Healthcare part2_8-8.pdf,1,craftsman,Craftsmen part2.pdf,0.74972886
+Healthcare part2_8-8.pdf,2,craftsman,Craftsmen part 1.pdf,0.7482613
+Healthcare part2_8-8.pdf,3,healthcare,Healthcare part1_11-end.pdf,0.74726444
+Healthcare part2_9-9.pdf,1,craftsman,Craftsmen part2.pdf,0.7719926
+Healthcare part2_9-9.pdf,2,craftsman,Craftsmen part2.pdf,0.76970285
+Healthcare part2_9-9.pdf,3,healthcare,Healthcare part1_6-6.pdf,0.76881176

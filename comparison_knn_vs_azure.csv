@@ -1,0 +1,61 @@
+Filename,PredictedLabel_KNN,TopNeighbors,TopSimilarities,PredictedLabel_Azure,LabelMatch
+capital income part2_1-1,capitalincome,Capital Income part1_8-8.pdf; Capital Income part1_14-14.pdf; Capital Income part1_7-7.pdf,0.5912; 0.3988; 0.3758,capitalincome,True
+capital income part2_10-11,capitalincome,Capital Income part1_4-5.pdf; Capital Income part1_11-11.pdf; Capital Income part1_7-7.pdf,0.5965; 0.3854; 0.3761,capitalincome,True
+capital income part2_12-12,capitalincome,Capital Income part1_3-3.pdf; Capital Income part1_11-11.pdf; Capital Income part1_14-14.pdf,0.4187; 0.3670; 0.3224,capitalincome,True
+capital income part2_13-13,capitalincome,Capital Income part1_3-3.pdf; Capital Income part1_11-11.pdf; Capital Income part1_6-6.pdf,0.2397; 0.2104; 0.1873,capitalincome,True
+capital income part2_14-15,capitalincome,Capital Income part1_14-14.pdf; Capital Income part1_8-8.pdf; Capital Income part1_3-3.pdf,0.3287; 0.2996; 0.2868,capitalincome,True
+capital income part2_16-16,capitalincome,Capital Income part1_1-2.pdf; Capital Income part1_11-11.pdf; Capital Income part1_7-7.pdf,0.4098; 0.3954; 0.3846,capitalincome,True
+capital income part2_17-17,capitalincome,Capital Income part1_1-2.pdf; Capital Income part1_6-6.pdf; Capital Income part1_4-5.pdf,0.2857; 0.2850; 0.2520,capitalincome,True
+capital income part2_18-18,capitalincome,Capital Income part1_6-6.pdf; Capital Income part1_1-2.pdf; Capital Income part1_4-5.pdf,0.3775; 0.3164; 0.3124,capitalincome,True
+capital income part2_19-19,capitalincome,Capital Income part1_8-8.pdf; Capital Income part1_3-3.pdf; Capital Income part1_14-14.pdf,0.2576; 0.2357; 0.2302,capitalincome,True
+capital income part2_2-2,capitalincome,Capital Income part1_11-11.pdf; Capital Income part1_3-3.pdf; Capital Income part1_7-7.pdf,0.6320; 0.6252; 0.4635,capitalincome,True
+capital income part2_20-20,capitalincome,Capital Income part1_11-11.pdf; Capital Income part1_7-7.pdf; Capital Income part1_3-3.pdf,0.4640; 0.3952; 0.3934,capitalincome,True
+capital income part2_21-23,capitalincome,Capital Income part1_9-10.pdf; Capital Income part1_4-5.pdf; Capital Income part1_12-13.pdf,0.3057; 0.2898; 0.2600,capitalincome,True
+capital income part2_24-24,capitalincome,Capital Income part1_16-end.pdf; Capital Income part1_7-7.pdf; Capital Income part1_11-11.pdf,0.4093; 0.3907; 0.3806,capitalincome,True
+capital income part2_25-26,capitalincome,Capital Income part1_11-11.pdf; Capital Income part1_7-7.pdf; Capital Income part1_14-14.pdf,0.4497; 0.4348; 0.4158,capitalincome,True
+capital income part2_27-28,capitalincome,Capital Income part1_14-14.pdf; Capital Income part1_4-5.pdf; Capital Income part1_3-3.pdf,0.4243; 0.4001; 0.3947,capitalincome,True
+capital income part2_29-end,capitalincome,Capital Income part1_1-2.pdf; Capital Income part1_6-6.pdf; Capital Income part1_4-5.pdf,0.3516; 0.3209; 0.2908,capitalincome,True
+capital income part2_3-4,capitalincome,Capital Income part1_4-5.pdf; Capital Income part1_14-14.pdf; Capital Income part1_9-10.pdf,0.6295; 0.4339; 0.4159,capitalincome,True
+capital income part2_5-5,capitalincome,Capital Income part1_14-14.pdf; Capital Income part1_9-10.pdf; Capital Income part1_8-8.pdf,0.7170; 0.5807; 0.3727,capitalincome,True
+capital income part2_6-6,capitalincome,Capital Income part1_7-7.pdf; Capital Income part1_8-8.pdf; Capital Income part1_3-3.pdf,0.2193; 0.2088; 0.2067,capitalincome,True
+capital income part2_7-7,capitalincome,Capital Income part1_12-13.pdf; Capital Income part1_9-10.pdf; Capital Income part1_14-14.pdf,0.3031; 0.2299; 0.2185,capitalincome,True
+capital income part2_8-9,capitalincome,Capital Income part1_12-13.pdf; Capital Income part1_9-10.pdf; Capital Income part1_14-14.pdf,0.2954; 0.2770; 0.2533,capitalincome,True
+craftsmen part2_1-1,craftsman,Craftsmen part 1_1-1.pdf; Craftsmen part 1_5-7.pdf; Craftsmen part2.pdf,0.2772; 0.2712; 0.2694,craftsman,True
+craftsmen part2_11-11,craftsman,Craftsmen part2.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part 1_1-1.pdf,0.2709; 0.2300; 0.2242,craftsman,True
+craftsmen part2_12-12,craftsman,Craftsmen part 1_1-1.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part 1_4-4.pdf,0.3392; 0.2341; 0.2147,craftsman,True
+craftsmen part2_13-13,craftsman,Craftsmen part 1_3-3.pdf; Craftsmen part2.pdf; Craftsmen part 1_4-4.pdf,0.2377; 0.2349; 0.2182,craftsman,True
+craftsmen part2_14-15,craftsman,Craftsmen part 1_8-9.pdf; Craftsmen part2.pdf; Craftsmen part 1_4-4.pdf,0.2283; 0.2121; 0.2007,craftsman,True
+craftsmen part2_16-16,craftsman,Craftsmen part 1_1-1.pdf; Craftsmen part2.pdf; Craftsmen part 1_3-3.pdf,0.2250; 0.1717; 0.1685,craftsman,True
+craftsmen part2_17-17,craftsman,Craftsmen part 1_3-3.pdf; Craftsmen part2.pdf; Craftsmen part 1_5-7.pdf,0.3803; 0.2916; 0.2786,craftsman,True
+craftsmen part2_18-18,craftsman,Craftsmen part 1_3-3.pdf; Craftsmen part2.pdf; Craftsmen part 1_5-7.pdf,0.2818; 0.2191; 0.2053,craftsman,True
+craftsmen part2_19-19,craftsman,Craftsmen part 1_10-10.pdf; Craftsmen part 1.pdf; Craftsmen part 1_11-11.pdf,0.3016; 0.2670; 0.2557,craftsman,True
+craftsmen part2_2-2,craftsman,Craftsmen part2.pdf; Craftsmen part 1_1-1.pdf; Craftsmen part 1.pdf,0.2767; 0.2481; 0.2431,craftsman,True
+craftsmen part2_20-20,craftsman,Craftsmen part 1_10-10.pdf; Craftsmen part 1.pdf; Craftsmen part 1_11-11.pdf,0.3254; 0.2844; 0.2674,craftsman,True
+craftsmen part2_21-21,craftsman,Craftsmen part 1_3-3.pdf; Craftsmen part 1_5-7.pdf; Craftsmen part2.pdf,0.2148; 0.2027; 0.1804,craftsman,True
+craftsmen part2_22-23,craftsman,Craftsmen part 1_8-9.pdf; Craftsmen part 1_5-7.pdf; Craftsmen part 1.pdf,0.3819; 0.3087; 0.3017,craftsman,True
+craftsmen part2_24-end,craftsman,Craftsmen part2.pdf; Craftsmen part 1.pdf; Craftsmen part 1_8-9.pdf,0.2837; 0.2354; 0.2154,craftsman,True
+craftsmen part2_3-3,craftsman,Craftsmen part 1_5-7.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part 1.pdf,0.2142; 0.2082; 0.1716,craftsman,True
+craftsmen part2_4-4,craftsman,Craftsmen part 1_5-7.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part 1_4-4.pdf,0.3043; 0.1999; 0.1631,craftsman,True
+craftsmen part2_5-5,craftsman,Craftsmen part 1_4-4.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part2.pdf,0.2031; 0.1963; 0.1960,craftsman,True
+craftsmen part2_6-6,craftsman,Craftsmen part2.pdf; Craftsmen part 1_3-3.pdf; Craftsmen part 1_5-7.pdf,0.2639; 0.2444; 0.2433,craftsman,True
+craftsmen part2_7-7,craftsman,Craftsmen part 1_8-9.pdf; Craftsmen part 1_5-7.pdf; Craftsmen part 1.pdf,0.3037; 0.2972; 0.2850,craftsman,True
+craftsmen part2_8-10,craftsman,Craftsmen part2.pdf; Craftsmen part 1.pdf; Craftsmen part 1_8-9.pdf,0.2948; 0.2367; 0.2330,craftsman,True
+healthcare part2_1-1,healthcare,Healthcare part2_1-1.pdf; Healthcare part1_7-8.pdf; Healthcare part1_10-10.pdf,0.9363; 0.2012; 0.1922,capitalincome,False
+healthcare part2_10-10,healthcare,Healthcare part1_4-4.pdf; Healthcare part1_5-5.pdf; Healthcare part1_7-8.pdf,0.2387; 0.2188; 0.2147,healthcare,True
+healthcare part2_11-11,healthcare,Healthcare part1_6-6.pdf; Healthcare part1_3-3.pdf; Healthcare part1_4-4.pdf,0.2446; 0.2175; 0.1825,healthcare,True
+healthcare part2_12-12,healthcare,Healthcare part1_9-9.pdf; Healthcare part1_2-2.pdf; Healthcare part1_1-1.pdf,0.1839; 0.1670; 0.1619,healthcare,True
+healthcare part2_13-14,healthcare,Healthcare part1_1-1.pdf; Healthcare part1_9-9.pdf; Healthcare part1_2-2.pdf,0.3514; 0.2676; 0.2408,healthcare,True
+healthcare part2_15-15,healthcare,Healthcare part1_5-5.pdf; Healthcare part1_6-6.pdf; Healthcare part2_1-1.pdf,0.3925; 0.2960; 0.2492,healthcare,True
+healthcare part2_16-16,healthcare,Healthcare part1_2-2.pdf; Healthcare part1_1-1.pdf; Healthcare part1_9-9.pdf,0.3393; 0.2669; 0.2458,healthcare,True
+healthcare part2_17-17,healthcare,Healthcare part1_11-end.pdf; Healthcare part1_10-10.pdf; Craftsmen part 1.pdf,0.2737; 0.2558; 0.2342,healthcare,True
+healthcare part2_18-18,healthcare,Healthcare part1_3-3.pdf; Healthcare part1_9-9.pdf; Healthcare part1_4-4.pdf,0.1931; 0.1801; 0.1771,healthcare,True
+healthcare part2_19-20,healthcare,Healthcare part1_9-9.pdf; Healthcare part1_1-1.pdf; Healthcare part1_2-2.pdf,0.4223; 0.2641; 0.2536,healthcare,True
+healthcare part2_2-2,healthcare,Healthcare part1_2-2.pdf; Healthcare part1_9-9.pdf; Healthcare part1_1-1.pdf,0.4927; 0.3211; 0.2909,healthcare,True
+healthcare part2_21-21,healthcare,Healthcare part1_5-5.pdf; Healthcare part1_6-6.pdf; Healthcare part1_4-4.pdf,0.3068; 0.2756; 0.2474,healthcare,True
+healthcare part2_22-22,healthcare,Healthcare part1_1-1.pdf; Healthcare part1_9-9.pdf; Healthcare part1_2-2.pdf,0.2387; 0.2382; 0.2169,healthcare,True
+healthcare part2_23-end,healthcare,Healthcare part1_4-4.pdf; Healthcare part1_11-end.pdf; Healthcare part1_10-10.pdf,0.3485; 0.2022; 0.1611,healthcare,True
+healthcare part2_3-4,healthcare,Healthcare part1_7-8.pdf; Healthcare part1_6-6.pdf; Healthcare part1_4-4.pdf,0.2456; 0.2351; 0.1815,healthcare,True
+healthcare part2_5-6,healthcare,Healthcare part1_7-8.pdf; Healthcare part1_3-3.pdf; Healthcare part1_6-6.pdf,0.2633; 0.2503; 0.2332,healthcare,True
+healthcare part2_7-7,craftsman,Craftsmen part 1_3-3.pdf; Healthcare part1_7-8.pdf; Craftsmen part2.pdf,0.2109; 0.1879; 0.1842,craftsman,True
+healthcare part2_8-8,healthcare,Healthcare part1_11-end.pdf; Healthcare part1_6-6.pdf; Craftsmen part 1.pdf,0.1892; 0.1686; 0.1626,craftsman,False
+healthcare part2_9-9,healthcare,Healthcare part1_6-6.pdf; Healthcare part1_3-3.pdf; Craftsmen part2.pdf,0.2267; 0.2022; 0.1855,craftsman,False
