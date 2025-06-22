@@ -4,7 +4,6 @@ from azure.storage.blob import BlobServiceClient, ContentSettings
 from azure.core.exceptions import ResourceExistsError
 
 # === Step 1: Setup Config ===
-AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=classsificationblob;AccountKey=GFzBMwZZlaHh8l/78rUFz7b2wioD5+isQlHzeEijqWeQV34GSoDdxoLCgql6BXTLJbgBZneB/4a9+AStKsjAiA==;EndpointSuffix=core.windows.net"
 CONTAINER_NAME = "training-data"
 BASE_DIR = Path(__file__).resolve().parent.parent
 LOCAL_TRAINING_DIR = BASE_DIR/"./uploads/train"

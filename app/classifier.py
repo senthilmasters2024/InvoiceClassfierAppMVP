@@ -8,16 +8,21 @@ import pandas as pd
 import csv
 import ast
 from pathlib import Path
+
+from azure.core.credentials import AzureKeyCredential
 from openai import OpenAI
 from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics.pairwise import cosine_similarity
-
+from openai import AzureOpenAI
+import os
 from utils.pdf_text import extract_text_from_pdf
-
-# OpenAI initialization
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-print("🔐 OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
+client = AzureOpenAI(
+    azure_endpoint="https://classificationagentazureopenai.openai.azure.com/",
+    azure_deployment="text-embedding-3-large",
+    api_version="2023-05-15",
+    api_key=""
+)
 
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
